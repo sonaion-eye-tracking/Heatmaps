@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/py-sonaion-analysis.iml" filepath="$PROJECT_DIR$/.idea/py-sonaion-analysis.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/py-sonaion-heatmaps.iml" filepath="$PROJECT_DIR$/.idea/py-sonaion-heatmaps.iml" />
     </modules>
   </component>
 </project>
