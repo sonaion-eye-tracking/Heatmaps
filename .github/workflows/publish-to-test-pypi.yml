@@ -1,13 +1,14 @@
 name: Publish Python 🐍 distributions 📦 to PyPI
 
 on:
-  release:
-    types: [published]
+  push:
+    branches:
+      - main
 
 jobs:
   build-n-publish:
     name: Build and publish Python 🐍 distributions 📦 to PyPI
-    runs-on: ubuntu-18.04
+    runs-on: windows-latest
     steps:
     - uses: actions/checkout@master
     - name: Set up Python 3.9
@@ -19,8 +20,11 @@ jobs:
         python -m
         pip install
         build
+        setuptools
+        setuptools-rust
+        wheel
         --user
-    - name: Build a binary wheel and a source tarball
+    - name: Build a binary wheel
       run: >-
         python setup.py bdist_wheel
     - name: Publish distribution 📦 to PyPI
